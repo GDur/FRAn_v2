@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gavpi>
+  <Database />
+  <Action_Sequence name="F13" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="F13" />
+  </Action_Sequence>
+  <Action_Sequence name="F14" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="F14" />
+    <Action type="Speak" value="function written" />
+  </Action_Sequence>
+  <Action_Sequence name="control+z" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="Z" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="control+a" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="A" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="control+y" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="Y" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="delete" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="Delete" />
+  </Action_Sequence>
+  <Trigger name="f13" value="write anon" type="Phrase" comment="">
+    <Trigger_Event name="F13" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="f14" value="write function" type="Phrase" comment="">
+    <Trigger_Event name="F14" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="control+z" value="revert action" type="Phrase" comment="">
+    <Trigger_Event name="control+z" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="control+y" value="redo action" type="Phrase" comment="">
+    <Trigger_Event name="control+y" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="control+a" value="select all" type="Phrase" comment="">
+    <Trigger_Event name="control+a" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="delete" value="delete it" type="Phrase" comment="">
+    <Trigger_Event name="delete" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+</gavpi>
