@@ -24,11 +24,25 @@ sendViaClipboard(stringToPaste){
 SetTitleMatchMode, 2 
 
 
+
+F24::
+	SoundSet +10  ; Increase master volume by 10%
+return
+F23::
+	SoundSet -10  ; Increase master volume by 10%
+return
+F22::
+	SoundSet, 80
+return
+F21::
+	SoundSet, 30
+return
+
+
 #If WinActive("*")
 	~Alt::Send, ^s {F5}
 
 #If WinActive(".ahk") 
-
 	<^>!F1::
 		snippet =
 		( LTrim
@@ -40,17 +54,7 @@ SetTitleMatchMode, 2
 	return
 	
 ;#If WinActive(".js") OR  WinActive(".ts") 
-	<^>!F3::
-		snippet =
-		( LTrim
-			function fname(){
-			}
-		)
-		sendViaClipboard(snippet)
-		Send, {Left 5}^+{Left}
-	return
-
-	<^>!F2::
+	^F1::
 		snippet =
 		( LTrim
 			() => {
@@ -60,4 +64,15 @@ SetTitleMatchMode, 2
 		sendViaClipboard(snippet)
 		Send, {Left 2}
 	return
+	
+	^F2::
+		snippet =
+		( LTrim
+			function fname(){
+			}
+		)
+		sendViaClipboard(snippet)
+		Send, {Left 5}^+{Left}
+	return
+
 
