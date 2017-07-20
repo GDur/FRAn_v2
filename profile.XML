@@ -2,6 +2,7 @@
 <gavpi>
   <Database>
     <Data name="test" type="INT" value="67" comment="" />
+    <Data name="aaaaa" type="STRING" value="aaaaaaaaaaaaaaaaaaaa" comment="" />
   </Database>
   <Action_Sequence name="F13" type="Action_Sequence" comment="" random="False">
     <Action type="KeyDown" value="F13" />
@@ -106,23 +107,67 @@
     <Action type="KeyPress" value="C" />
     <Action type="KeyUp" value="ControlKey" />
   </Action_Sequence>
+  <Action_Sequence name="^NumPad9" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad9" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad8" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad8" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad7" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad7" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad6" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad6" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad5" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad5" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad4" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad4" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad3" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad3" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad2" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad2" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad1" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad1" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="^NumPad0" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="ControlKey" />
+    <Action type="KeyPress" value="NumPad0" />
+    <Action type="KeyUp" value="ControlKey" />
+  </Action_Sequence>
+  <Action_Sequence name="PAUSE" type="Action_Sequence" comment="" random="False">
+    <Action type="KeyDown" value="Pause" />
+  </Action_Sequence>
   <Trigger name="control+z" value="revert action" type="Phrase" comment="">
     <Trigger_Event name="control+z" type="Action_Sequence" value="" comment="" />
   </Trigger>
   <Trigger name="control+y" value="redo action" type="Phrase" comment="">
     <Trigger_Event name="control+y" type="Action_Sequence" value="" comment="" />
   </Trigger>
-  <Trigger name="control+a" value="select all" type="Phrase" comment="">
-    <Trigger_Event name="control+a" type="Action_Sequence" value="" comment="" />
-  </Trigger>
   <Trigger name="delete" value="delete it" type="Phrase" comment="">
     <Trigger_Event name="delete" type="Action_Sequence" value="" comment="" />
-  </Trigger>
-  <Trigger name="max volume" value="max volume" type="Phrase" comment="">
-    <Trigger_Event name="F22" type="Action_Sequence" value="" comment="" />
-  </Trigger>
-  <Trigger name="min volume" value="min volume" type="Phrase" comment="">
-    <Trigger_Event name="F21" type="Action_Sequence" value="" comment="" />
   </Trigger>
   <Trigger name="computer?" value="computer?" type="Phrase" comment="">
     <Trigger_Event name="computer?" type="Action_Sequence" value="" comment="" />
@@ -150,5 +195,35 @@
   </Trigger>
   <Trigger name="save document" value="save document" type="Phrase" comment="">
     <Trigger_Event name="control+s" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="maximum volume" value="maximum volume" type="Phrase" comment="">
+    <Trigger_Event name="F22" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="minimum volume" value="minimum volume" type="Phrase" comment="">
+    <Trigger_Event name="F21" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="control+a" value="select everything" type="Phrase" comment="">
+    <Trigger_Event name="control+a" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="play classic radio" value="play classic radio" type="Phrase" comment="">
+    <Trigger_Event name="^NumPad8" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="play movie radio" value="play movie radio" type="Phrase" comment="">
+    <Trigger_Event name="^NumPad9" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="play club radio" value="play club radio" type="Phrase" comment="">
+    <Trigger_Event name="^NumPad4" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="play NPR radio" value="play NPR radio" type="Phrase" comment="">
+    <Trigger_Event name="^NumPad2" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="play main radio" value="play main radio" type="Phrase" comment="">
+    <Trigger_Event name="^NumPad5" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="stop radio" value="stop radio" type="Phrase" comment="">
+    <Trigger_Event name="^NumPad3" type="Action_Sequence" value="" comment="" />
+  </Trigger>
+  <Trigger name="stop ads" value="stop ads" type="Phrase" comment="">
+    <Trigger_Event name="PAUSE" type="Action_Sequence" value="" comment="" />
   </Trigger>
 </gavpi>
