@@ -23,11 +23,14 @@ sendViaClipboard(stringToPaste){
 ;A window's title can contain WinTitle anywhere inside it to be a match. 
 SetTitleMatchMode, 2 
 
+;
 
-
+; 'volume up'::
 F24::
 	SoundSet +10  ; Increase master volume by 10%
 return
+
+; 'volume down'::
 F23::
 	SoundSet -10  ; Increase master volume by 10%
 return
@@ -43,7 +46,7 @@ return
 	~Alt::Send, ^s {F5}
 
 #If WinActive(".ahk") 
-	<^>!F1::
+	^F3::
 		snippet =
 		( LTrim
 			fname(){
