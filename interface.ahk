@@ -9,6 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; When the Send command or Hotstrings are used in their default (non-raw) mode, characters such as {}^!+# have special meaning. Therefore, to use them literally in these cases, enclose them in braces. For example: Send {^}{!}{{}.
 ; #EscapeChar \
 
+FRAn.generateProfile(A_ScriptFullPath)
 FRAn.speak("script ready")
 ;FRAn.send("aaa`nlol")
 
@@ -87,5 +88,3 @@ return
 	return
 
 
-
-FRAn.generateProfile(A_ScriptFullPath)

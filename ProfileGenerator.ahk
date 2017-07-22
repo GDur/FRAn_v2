@@ -5,12 +5,18 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 generatePRofile(ahkFile){
-	fileName := "generatedProfile.xml"
+	
+	
+	SplitPath, ahkFile, name, dir, ext, name_no_ext, drive
+
+	fileName := name_no_ext ".xml"
+
+
 	FileDelete, %fileName%
 	FileAppend,
 	(
 	<?xml version="1.0" encoding="utf-8"?>
-	<gavpi>
+<gavpi>
 	), %fileName%
 
 	FileRead, OutputVar, %ahkFile%
@@ -65,9 +71,9 @@ generatePRofile(ahkFile){
 	FileAppend,
 		(
 	`n	</Action_Sequence>
-		<Trigger name="%hotPhrase%" value="%hotPhrase%" type="Phrase" comment="">
-			<Trigger_Event name="%hotPhrase%" type="Action_Sequence" value="" comment="" />
-		</Trigger>
+	<Trigger name="%hotPhrase%" value="%hotPhrase%" type="Phrase" comment="">
+		<Trigger_Event name="%hotPhrase%" type="Action_Sequence" value="" comment="" />
+	</Trigger>`n
 		), %fileName%
 	}
 
