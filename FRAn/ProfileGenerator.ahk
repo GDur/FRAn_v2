@@ -4,9 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
-generatePRofile(ahkFile){
-	
-	
+generateProfile(ahkFile) {
 	SplitPath, ahkFile, name, dir, ext, name_no_ext, drive
 
 	fileName := name_no_ext ".xml"

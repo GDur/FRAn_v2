@@ -10,39 +10,38 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; it will countdown from 5 seconds to 0 and only in that time it will follow commands
 ; chaining commands: after performing a command the timer is reset to 5 seconds again
 
-#Include SendViaClipboard.ahk
-#Include TextToSpeech.ahk
-#Include ProfileGenerator.ahk
+#Include %A_ScriptDir%/FRAn/TextToSpeech.ahk
+#Include %A_ScriptDir%/FRAn/ProfileGenerator.ahk
+#Include %A_ScriptDir%/FRAn/SendViaClipboard.ahk
+
+
 
 class FRAn
 {
-	timeToListenLeft := 0
-	initCountdown(){
-		#Persistent
-			SetTimer, countdown, 1000
-		return
-
-		countdown:
-			timeToListenLeft := timeToListenLeft - 1
-		return
-	}
+	
+	timeWentBy(){
+		
+		this.timeToListenLeft -= 1
+		}
 
     send(msg) {
 		sendViaClipboard(msg)
     }
 	
     speak(msg) {
-		speak(msg)
+		speakWait(msg)
     }
 	
-	startListening(){
-		global timeToListenLeft 
-		timeToListenLeft := 5
+	startListening() {
+		this.timeToListenLeft := 5
 	}
-
+	
+	stopListening() {
+		this.timeToListenLeft := -1
+	}
+	
 	isListening() {
-		global timeToListenLeft 
-		if(timeToListenLeft >= 0){
+		if(this.timeToListenLeft >= 0){
 			this.startListening()
 			return true
 		}
@@ -50,9 +49,15 @@ class FRAn
 	}
 	generateProfile(scriptPath){
 		generateProfile(scriptPath)
+		#Persistent
+			SetTimer, countdown, 1000
+		return
+
+		countdown:
+			FRAn.timeWentBy()
+		return
 	}
 }
 
 ; new FRAn()
-FRAn.initCountdown()
-FRAn.speak("asdadsa")
+
