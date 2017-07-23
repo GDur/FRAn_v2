@@ -69,6 +69,15 @@ F20::
 	FRAn.speak("ok")
 return
 
+; 'play movie radio'::
+F19::^Numpad9
+; 'play classic radio'::
+F18::^Numpad8
+
+; 'play main radio'::
+F17::^Numpad5
+; 'play club radio'::
+F16::^Numpad4
 
 #If WinActive("*")
 	~Alt::Send, ^s {F5}

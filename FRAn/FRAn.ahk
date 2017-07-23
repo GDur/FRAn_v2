@@ -14,7 +14,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include %A_LineFile%/../ProfileGenerator.ahk
 #Include %A_LineFile%/../SendViaClipboard.ahk
 
-
+/*
 SplitPath, A_LineFile,, FRAnsDirectory
 Run,  %FRAnsDirectory%/../GAVPI/GAVPI.exe , , , OutputVarPID
 WinWait ahk_pid %OutputVarPID%
@@ -28,7 +28,7 @@ else {
 	WinActivate
 
 }
-return
+*/
 
 
 class FRAn
