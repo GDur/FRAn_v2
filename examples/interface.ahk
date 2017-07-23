@@ -11,7 +11,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; #EscapeChar \
 
 FRAn.generateProfile(A_ScriptFullPath)
-FRAn.speak("Say 'OK FRAn', and I will help you")
+FRAn.speak("Say: 'OK FRAn', and I will help you!")
 ;FRAn.send("aaa`nlol")
 
 ;A window's title can contain WinTitle anywhere inside it to be a match. 
@@ -20,7 +20,7 @@ SetTitleMatchMode, 2
 ; 'OK Fran'::
 ^F13::
 	FRAn.startListening()
-	FRAn.speak("Yes")
+	FRAn.speak("Yes!")
 return
 
 ; 'stop'::

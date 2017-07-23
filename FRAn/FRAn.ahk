@@ -13,12 +13,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include %A_LineFile%/../TextToSpeech.ahk
 #Include %A_LineFile%/../ProfileGenerator.ahk
 #Include %A_LineFile%/../SendViaClipboard.ahk
-#Include %A_LineFile%/../resolvePath.ahk
 
-/*
+
 SplitPath, A_LineFile,, FRAnsDirectory
 Run,  %FRAnsDirectory%/../GAVPI/GAVPI.exe , , , OutputVarPID
-WinWait ahk_pid %OutputVarPID%.
+WinWait ahk_pid %OutputVarPID%
 if ErrorLevel
 {
     MsgBox, GAVPI did not start in time.
@@ -26,17 +25,11 @@ if ErrorLevel
 }
 else {
 	WinShow
-	WinWaitActive, ahk_exe GAVPI.exe, , 2
-	{
-		Sleep 200
-		Send, {Alt}f
-		Sleep 200
-		Send, {Enter}
-		
-	}
+	WinActivate
+
 }
 return
-*/
+
 
 class FRAn
 {	

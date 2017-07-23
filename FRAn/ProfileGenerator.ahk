@@ -9,6 +9,15 @@ generateProfile(ahkFile) {
 
 	fileName := name_no_ext ".xml"
 
+	FileDelete, gavpi-settings.xml
+	FileAppend,
+	(
+	<?xml version="1.0" encoding="utf-8"?>
+	<gavpi>
+	  <Settings default_profile_name="%fileName%" default_profile_filepath="%fileName%" voice_info="Microsoft David Desktop" pushtotalk_mode="Off" pushtotalk_key="Scroll" recognizer_info="en-US" />
+	</gavpi>
+	), gavpi-settings.xml
+		
 
 	FileDelete, %fileName%
 	FileAppend,
