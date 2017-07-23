@@ -4,25 +4,45 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #SingleInstance Force
-; FRAn Freundlicher Replikatoren Android
+; FRAn Frendly Replicator Android
 
 ; this script will react to 'OK Fran' and only after saying it will it perform commands
 ; it will countdown from 5 seconds to 0 and only in that time it will follow commands
 ; chaining commands: after performing a command the timer is reset to 5 seconds again
 
-#Include %A_ScriptDir%/FRAn/TextToSpeech.ahk
-#Include %A_ScriptDir%/FRAn/ProfileGenerator.ahk
-#Include %A_ScriptDir%/FRAn/SendViaClipboard.ahk
+#Include %A_LineFile%/../TextToSpeech.ahk
+#Include %A_LineFile%/../ProfileGenerator.ahk
+#Include %A_LineFile%/../SendViaClipboard.ahk
+#Include %A_LineFile%/../resolvePath.ahk
 
-
+/*
+SplitPath, A_LineFile,, FRAnsDirectory
+Run,  %FRAnsDirectory%/../GAVPI/GAVPI.exe , , , OutputVarPID
+WinWait ahk_pid %OutputVarPID%.
+if ErrorLevel
+{
+    MsgBox, GAVPI did not start in time.
+    return
+}
+else {
+	WinShow
+	WinWaitActive, ahk_exe GAVPI.exe, , 2
+	{
+		Sleep 200
+		Send, {Alt}f
+		Sleep 200
+		Send, {Enter}
+		
+	}
+}
+return
+*/
 
 class FRAn
-{
-	
-	timeWentBy(){
-		
+{	
+	timeWentBy() {
 		this.timeToListenLeft -= 1
-		}
+	}
 
     send(msg) {
 		sendViaClipboard(msg)
@@ -47,8 +67,10 @@ class FRAn
 		}
 		return false
 	}
+
 	generateProfile(scriptPath){
 		generateProfile(scriptPath)
+		
 		#Persistent
 			SetTimer, countdown, 1000
 		return
@@ -58,6 +80,3 @@ class FRAn
 		return
 	}
 }
-
-; new FRAn()
-

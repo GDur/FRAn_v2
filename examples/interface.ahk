@@ -5,13 +5,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 #SingleInstance Force
-#Include FRAn/FRAn.ahk
+#Include ../FRAn/FRAn.ahk
 
 ; When the Send command or Hotstrings are used in their default (non-raw) mode, characters such as {}^!+# have special meaning. Therefore, to use them literally in these cases, enclose them in braces. For example: Send {^}{!}{{}.
 ; #EscapeChar \
 
 FRAn.generateProfile(A_ScriptFullPath)
-FRAn.speak("Say OK FRAn and I will help you")
+FRAn.speak("Say 'OK FRAn', and I will help you")
 ;FRAn.send("aaa`nlol")
 
 ;A window's title can contain WinTitle anywhere inside it to be a match. 

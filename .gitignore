@@ -1,1 +1,13 @@
 *.bak
+/GAVPI/GAVPI.exe
+/GAVPI/InputManager.dll
+/GAVPI/LICENSE
+/GAVPI/MRU.lst
+/GAVPI/NAudio.WindowsMediaFormat.dll
+/GAVPI/NAudio.dll
+/GAVPI/NAudio.xml
+/GAVPI/Profiles/README.txt
+/GAVPI/Profiles/Sample_EliteDangerous.xml
+/GAVPI/Profiles/Sample_StarCitizen.xml
+/GAVPI/Sounds/README.txt
+/GAVPI/gavpi-settings.xml
